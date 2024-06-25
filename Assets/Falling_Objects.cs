@@ -6,26 +6,28 @@ using UnityEngine.UI;
 
 public class Falling_Objects : MonoBehaviour
 {
-   public GameObject spawnObjects;  
-   public Vector3 newPosition; 
-   public float minX = -3.5; 
-   public float maxX = 3.5; 
-   // Start is called before the first frame update
+   public GameObject martillo;  
+   public float minX = -3.5f; 
+   public float maxX = 3.5f; 
+   public float Y = 4f; 
+
+   
+    // Start is called before the first frame update
     void Start() 
     { 
-        
+        SpawnObjects();
     } 
-
+    
     // Update is called once per frame 
-    void Update()
+    void SpawnObjects()
+
     { 
         int numberSpawned = Random.Range(1, 6);
-        for (int i = 0; i < NumberSpawned; i++)
+        for (int i = 0; i < numberSpawned; i++)
         { 
             float randomX = Random.Range(minX, maxX); 
-            Vector3 newPosition = new Vector3(randomX, transform.position.y.transform.position.z); 
-            Instantiate(spawnObjects, newPosition, Quaternion.identity); 
+            Vector3 newPosition = new Vector3(randomX, transform.position.y, transform.position.z);
+            Instantiate(martillo, newPosition, Quaternion.identity); 
         } 
     } 
 }
-
