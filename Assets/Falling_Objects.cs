@@ -22,7 +22,7 @@ public class Falling_Objects : MonoBehaviour
     void SpawnObjects()
 
     { 
-        int numberSpawned = Random.Range(1, 6);
+        int numberSpawned = Random.Range(1, 7);
         for (int i = 0; i < numberSpawned; i++)
         { 
             float randomX = Random.Range(minX, maxX); 
