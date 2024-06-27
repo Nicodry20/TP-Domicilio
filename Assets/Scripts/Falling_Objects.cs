@@ -17,7 +17,6 @@ public class Falling_Objects : MonoBehaviour
     public GameObject panelNotificaciones;
     public Text notificacionTexto;
     public GameObject panelDebeIngresarResultado;
-    public Button cerrarPanelDebeIngresarResultado;
 
     public Button botonJugarOtraVez;
     public Button botonSalir;
@@ -27,7 +26,6 @@ public class Falling_Objects : MonoBehaviour
     void Start()
     {
         responderButton.onClick.AddListener(VerificarRespuesta);
-        cerrarPanelDebeIngresarResultado.onClick.AddListener(CerrarPanelDebeIngresarResultado);
 
         botonJugarOtraVez.onClick.AddListener(JugarOtraVez);
         botonSalir.onClick.AddListener(Salir);
@@ -40,7 +38,7 @@ public class Falling_Objects : MonoBehaviour
         cantidadObjetos = 0;
         foreach (GameObject obj in objectSpawn)
         {
-            int num = Random.Range(0, 3);
+            int num = Random.Range(0, 2);
             for (int i = 0; i < num; i++)
             {
                 float randomX = Random.Range(minX, maxX);
