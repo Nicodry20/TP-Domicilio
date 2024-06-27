@@ -40,12 +40,13 @@ public class Falling_Objects : MonoBehaviour
         cantidadObjetos = 0;
         foreach (GameObject obj in objectSpawn)
         {
-            int num = Random.Range(0, 2);
+            int num = Random.Range(0, 3);
             for (int i = 0; i < num; i++)
             {
                 float randomX = Random.Range(minX, maxX);
                 Vector3 newPosition = new Vector3(randomX, spawnY, spawnZ);
-                Instantiate(obj, newPosition, Quaternion.identity);
+                GameObject spawnedObject = Instantiate(obj, newPosition, Quaternion.identity);
+                spawnedObject.tag = "SpawnedObject";
                 cantidadObjetos++;
             }
         }
