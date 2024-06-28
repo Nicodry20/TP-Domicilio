@@ -10,7 +10,8 @@ public class Falling_Objects : MonoBehaviour
     public float minX = -3.5f;
     public float maxX = 3.5f;
     public float spawnY = 4f;
-    public float spawnZ = -2.5f;
+    public float minZ = -3;
+    public float maxZ = 11f;
 
     public InputField inputField;
     public Button responderButton;
@@ -42,7 +43,8 @@ public class Falling_Objects : MonoBehaviour
             for (int i = 0; i < num; i++)
             {
                 float randomX = Random.Range(minX, maxX);
-                Vector3 newPosition = new Vector3(randomX, spawnY, spawnZ);
+                float randomZ = Random.Range(minZ, maxZ);
+                Vector3 newPosition = new Vector3(randomX, spawnY, randomZ);
                 GameObject spawnedObject = Instantiate(obj, newPosition, Quaternion.identity);
                 spawnedObject.tag = "SpawnedObject";
                 cantidadObjetos++;
