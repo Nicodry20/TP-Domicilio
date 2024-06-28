@@ -10,8 +10,8 @@ public class Falling_Objects : MonoBehaviour
     public float minX = -3.5f;
     public float maxX = 3.5f;
     public float spawnY = 4f;
-    public float minZ = -3;
-    public float maxZ = 11f;
+    public float minZ = 11f;
+    public float maxZ = -3f;
 
     public InputField inputField;
     public Button responderButton;
